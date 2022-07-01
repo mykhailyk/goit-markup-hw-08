@@ -1,0 +1,21 @@
+.head__button {
+  height: 50px;
+  min-width: 200px;
+  font-family: inherit;
+  color: var(--alternative-text-color);
+  background-color: var(--active-btn-color);
+  font-weight: var(--main-font-weight);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition-duration: var(--default-transition-duration);
+  transition-timing-function: var(--default-transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
