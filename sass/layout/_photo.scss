@@ -1,5 +1,8 @@
 .photo {
-  padding-top: 0;
+  display: none;
+  @include desktop {
+    display: inherit;
+  }
 }
 
 .photo__list {

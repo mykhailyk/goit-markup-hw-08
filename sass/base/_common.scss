@@ -21,3 +21,16 @@ body {
     padding-bottom: 94px;
   }
 }
+
+.margin-title {
+  margin-bottom: 30px;
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+
+.list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}

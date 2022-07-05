@@ -80,6 +80,21 @@ body {
   }
 }
 
+.margin-title {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .margin-title {
+    margin-bottom: 50px;
+  }
+}
+
+.list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .head__button {
   height: 50px;
   min-width: 200px;
@@ -628,7 +643,12 @@ body {
 }
 
 .photo {
-  padding-top: 0;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .photo {
+    display: inherit;
+  }
 }
 
 .photo__list {
@@ -661,21 +681,6 @@ body {
 
 .team {
   background-color: #f5f4fa;
-}
-
-.team__title {
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 1200px) {
-  .team__title {
-    margin-bottom: 50px;
-  }
-}
-
-.team__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
 }
 
 .workers {
@@ -756,24 +761,20 @@ body {
   transition-timing-function: var(--default-transition-timing-function);
 }
 
-.clients__title {
-  margin-top: 94px;
-  margin-bottom: 50px;
-}
-
-.clients__list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 94px;
-}
-
 .clients__item {
-  width: 170px;
+  width: 100%;
+  width: calc((100% - 30px) / 2);
   height: 92px;
-  margin-right: 30px;
 }
-.clients__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .clients__item-link {

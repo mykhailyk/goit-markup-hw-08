@@ -2,19 +2,6 @@
   background-color: #f5f4fa;
 }
 
-.team__title {
-  margin-bottom: 30px;
-  @include desktop {
-    margin-bottom: 50px;
-  }
-}
-
-.team__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
 .workers {
   padding-top: 30px;
   padding-bottom: 30px;
