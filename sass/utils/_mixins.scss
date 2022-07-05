@@ -6,7 +6,6 @@
   letter-spacing: $ls;
   text-align: $ta;
 }
-
 @mixin mobile {
   @media screen and (min-width: 480px) {
     @content;
@@ -22,7 +21,6 @@
     @content;
   }
 }
-
 @mixin retina {
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
