@@ -70,8 +70,26 @@ body {
 }
 
 .section {
-  padding-top: var(--default-padding);
-  padding-bottom: var(--default-padding);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 480px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .head__button {
@@ -122,7 +140,21 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 1px solid red; */
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .backdrop {
@@ -456,10 +488,11 @@ body {
 }
 
 .top-text {
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.91;
-  letter-spacing: 0.1em;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .header {
@@ -632,38 +665,40 @@ body {
   text-transform: uppercase;
 }
 
-.photo__title {
-  font-weight: var(--main-font-weight);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
 .team {
   background-color: #f5f4fa;
 }
 
 .team__title {
   margin-bottom: 50px;
-  font-weight: var(--main-font-weight);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .team__list {
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .workers {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team__item {
+  background-color: var(--background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .workers__title {
@@ -725,11 +760,6 @@ body {
 .clients__title {
   margin-top: 94px;
   margin-bottom: 50px;
-  font-weight: var(--main-font-weight);
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .clients__list {

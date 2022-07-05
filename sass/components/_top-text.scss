@@ -1,4 +1,8 @@
 .top-text{
-  @include font(11px, 600, 1.91, 0.1em);
-  
+  @include font(36px, 700, 1.16, 0.03em, center);
+  // font-size: $fs;
+  // font-weight: $fw;
+  // line-height: $lh;
+  // letter-spacing: $ls;
+  // text-align: $ta;
 }

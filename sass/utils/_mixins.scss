@@ -1,9 +1,10 @@
 
-@mixin font($fs, $fw, $lh, $ls) {
+@mixin font($fs, $fw, $lh, $ls, $ta) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
   letter-spacing: $ls;
+  text-align: $ta;
 }
 
 @mixin mobile {
