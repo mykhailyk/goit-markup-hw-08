@@ -22,7 +22,6 @@
   letter-spacing: 0.02em;
   transition-duration: var(--default-transition-duration);
   transition-timing-function: var(--default-transition-timing-function);
- 
   &:hover,
   &:focus {
     color: #2196f3;
@@ -36,7 +35,6 @@
 .navigation__link--current {
   color: var(--active-btn-color);
   position: relative;
-
   &::after {
     content: '';
     display: block;

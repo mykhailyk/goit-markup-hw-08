@@ -593,13 +593,19 @@ body {
 }
 
 .head__title {
-  color: var(--alternative-text-color);
+  font-size: 26px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
+  line-height: 1.61;
   letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--alternative-text-color);
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .head__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 @media screen and (min-width: 1200px) {
