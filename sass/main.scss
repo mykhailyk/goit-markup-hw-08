@@ -1,5 +1,6 @@
 @import './utils/vars';
 @import './utils/hiden';
+@import './utils/mixins';
 
 @import './base/reset';
 @import './base/common';
@@ -14,6 +15,7 @@
 @import './components/modal-send-btn';
 @import './components/portfolio-filter';
 @import './components/footer-connect-area';
+@import './components/top-text';
 
 @import './layout/header';
 @import './layout/head';
