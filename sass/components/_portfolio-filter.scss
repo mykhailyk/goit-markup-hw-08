@@ -1,14 +1,22 @@
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;  
+  @include tablet {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
-
 .filter-item:not(:last-child) {
   margin-right: 8px;
 }
 
 .filter-button {
+  margin-bottom: 15px;
   background-color: #f5f4fa;
   font-weight: 500;
   font-size: 16px;
@@ -22,6 +30,10 @@
   padding: 6px 22px;
   transition-duration: var(--default-transition-duration);
   transition-timing-function: var(--default-transition-timing-function);
+  @include desktop {
+    margin-bottom: 0px;
+  }
+
   &:hover,
   &:focus {
     color: var(--alternative-text-color);

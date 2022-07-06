@@ -119,11 +119,16 @@ body {
 .logo {
   font-family: var(--second-font-family);
   font-weight: var(--main-font-weight);
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
-  margin-right: 93px;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo__accent-blue {
@@ -324,8 +329,20 @@ body {
 
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .filter-item:not(:last-child) {
@@ -333,6 +350,7 @@ body {
 }
 
 .filter-button {
+  margin-bottom: 15px;
   background-color: #f5f4fa;
   font-weight: 500;
   font-size: 16px;
@@ -346,6 +364,11 @@ body {
   padding: 6px 22px;
   transition-duration: var(--default-transition-duration);
   transition-timing-function: var(--default-transition-timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .filter-button {
+    margin-bottom: 0px;
+  }
 }
 .filter-button:hover, .filter-button:focus {
   color: var(--alternative-text-color);
@@ -506,6 +529,10 @@ body {
 
 .header {
   border: 1px solid #ececec;
+}
+
+.logo-header {
+  margin-right: 93px;
 }
 
 .navigation__list {
@@ -890,15 +917,24 @@ body {
   margin-bottom: 12px;
 }
 
-.portfolio-list {
+.portfolio-link {
   display: flex;
-  margin: -15px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
 }
 
 .portfolio-item {
-  flex-basis: calc(33.3333333333% - 30px);
-  margin: 15px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .portfolio-item:hover .portfolio-description {
   transform: translate(0);
@@ -933,6 +969,7 @@ body {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+  flex-grow: 1;
 }
 
 .portfolio-title {

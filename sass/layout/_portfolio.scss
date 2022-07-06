@@ -1,12 +1,16 @@
-.portfolio-list {
+.portfolio-link {
   display: flex;
-  margin: -15px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
 }
-
 .portfolio-item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin: 15px;
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
 
   &:hover .portfolio-description {
     transform: translate(0);
@@ -44,6 +48,7 @@
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+    flex-grow: 1;
 }
 
 .portfolio-title {
