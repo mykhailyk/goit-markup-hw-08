@@ -1,6 +1,6 @@
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   background-color: var(--background-color);
   border-radius: 5px;
   position: absolute;
@@ -11,6 +11,10 @@
   transition: transform var(--default-transition-duration) var(--default-transition-timing-function),
     opacity var(--default-transition-duration) var(--default-transition-timing-function);
   padding: 40px;
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .is-hidden {
@@ -32,5 +36,3 @@
   color: var(--main-text-color);
   margin-bottom: 12px;
 }
-
-

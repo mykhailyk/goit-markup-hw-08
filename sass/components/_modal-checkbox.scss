@@ -1,10 +1,14 @@
 .checkbox__text {
-  font-size: var(--default-font-size);
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
   display: flex;
   align-items: center;
+  @include desktop {
+    font-size: var(--default-font-size);
+    line-height: 1.71;
+  }
 }
 
 .checkbox__text span {
