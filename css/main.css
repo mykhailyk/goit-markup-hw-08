@@ -535,9 +535,72 @@ body {
   margin-right: 93px;
 }
 
-.navigation__list {
+.menu__btn {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.menu__btn .close-menu__icon {
+  display: none;
+}
+.menu__btn .menu__icon {
+  transition-duration: var(--default-transition-duration);
+  transition-timing-function: var(--default-transition-timing-function);
+}
+.menu__btn.is-open .close-menu__icon {
+  display: block;
+  transition-duration: var(--default-transition-duration);
+  transition-timing-function: var(--default-transition-timing-function);
+}
+.menu__btn.is-open .menu__icon {
+  display: none;
+}
+.menu__btn:hover .menu__icon, .menu__btn:focus .menu__icon {
+  fill: var(--active-btn-color);
+}
+.menu__btn:hover .close-menu__icon, .menu__btn:focus .close-menu__icon {
+  fill: var(--active-btn-color);
+}
+@media screen and (min-width: 768px) {
+  .menu__btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    padding: 48px 40px;
+    background-color: var(--background-color);
+  }
+}
+.navigation.is-open {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header .container {
@@ -545,7 +608,20 @@ body {
   align-items: center;
 }
 
-.navigation__link,
+.navigation__link {
+  padding: 32px 0;
+  display: block;
+  color: var(--main-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition-duration: var(--default-transition-duration);
+  transition-timing-function: var(--default-transition-timing-function);
+}
+.navigation__link:hover, .navigation__link:focus {
+  color: #2196f3;
+}
+
 .contacts__link {
   padding: 32px 0;
   display: block;
@@ -556,9 +632,7 @@ body {
   transition-duration: var(--default-transition-duration);
   transition-timing-function: var(--default-transition-timing-function);
 }
-.navigation__link:hover, .navigation__link:focus,
-.contacts__link:hover,
-.contacts__link:focus {
+.contacts__link:hover, .contacts__link:focus {
   color: #2196f3;
 }
 

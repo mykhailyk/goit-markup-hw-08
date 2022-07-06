@@ -1,12 +1,78 @@
 .header {
   border: 1px solid #ececec;
 }
-.logo-header{
-    margin-right: 93px;
+.logo-header {
+  margin-right: 93px;
 }
+.menu__btn {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+
+  & .close-menu__icon {
+    display: none;
+  }
+  & .menu__icon {
+    transition-duration: var(--default-transition-duration);
+    transition-timing-function: var(--default-transition-timing-function);
+  }
+
+  &.is-open .close-menu__icon {
+    display: block;
+    transition-duration: var(--default-transition-duration);
+    transition-timing-function: var(--default-transition-timing-function);
+  }
+
+  &.is-open .menu__icon {
+    display: none;
+  }
+
+  &:hover .menu__icon,
+  &:focus .menu__icon {
+    fill: var(--active-btn-color);
+  }
+
+  &:hover .close-menu__icon,
+  &:focus .close-menu__icon {
+    fill: var(--active-btn-color);
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+.navigation {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    padding: 48px 40px;
+    background-color: var(--background-color);
+  }
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+  @include tablet {
+    display: flex;
+    width: 100%;
+  }
+}
+
 .navigation__list {
-  display: flex;
-  align-items: center;
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header .container {
@@ -14,7 +80,22 @@
   align-items: center;
 }
 
-.navigation__link,
+.navigation__link {
+  padding: 32px 0;
+  display: block;
+  color: var(--main-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition-duration: var(--default-transition-duration);
+  transition-timing-function: var(--default-transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
 .contacts__link {
   padding: 32px 0;
   display: block;
@@ -24,7 +105,7 @@
   letter-spacing: 0.02em;
   transition-duration: var(--default-transition-duration);
   transition-timing-function: var(--default-transition-timing-function);
- 
+
   &:hover,
   &:focus {
     color: #2196f3;
