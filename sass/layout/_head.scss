@@ -1,23 +1,57 @@
 .head {
-  height: 600px;
-  max-width: 1600px;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-color: rgba(47, 48, 58, 0.4);
+  padding: 118px 0;
   margin: 0 auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero-bg.jpg);
+  text-align: center;
+  max-width: 767px;
+  height: 400px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include retina {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-mob@2x.jpg);
+  }
+
+  @include tablet {
+    max-width: 1199px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-tab.jpg);
+
+    @include retina {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-tab@2x.jpg);
+    }
+  }
+
+  @include desktop {
+    padding: 200px 0;
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-desktop.jpg);
+
+    @include retina {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-desktop@2x.jpg);
+    }
+  }
 }
 
 .head__title {
-  @include font(26px, 900, 1.61, 0.06em, center);
+  margin: 0 auto 30px auto;
+  max-width: 360px;
   color: var(--alternative-text-color);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   @include desktop {
-    @include font(44px, null, 1.36, null, null);
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
