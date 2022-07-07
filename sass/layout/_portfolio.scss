@@ -32,7 +32,7 @@
 .portfolio-description {
   position: absolute;
   top: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
   background: rgba(33, 150, 243, 0.9);
   font-size: 18px;
   line-height: 1.55;
@@ -42,13 +42,20 @@
   transform: translateY(100%);
   transition: transform var(--default-transition-duration) linear;
   transition-timing-function: var(--default-transition-timing-function);
+  @include tablet {
+    padding: 49px 24px 77px 24px;
+  }
+
+  @include desktop {
+    padding: 63px 24px;
+  }
 }
 
 .portfolio-text-wrapper {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .portfolio-title {
